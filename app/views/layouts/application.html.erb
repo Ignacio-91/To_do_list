@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ToDoList</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>   
+    
+      <div class="jumbotron">
+        <div class="container text-center">  
+            <h1 class="display-4 text-center">Lista de Tareas</h1>
+            <p class="lead text-center">Aplicacion de Lista de Tareas por hacer</p>
+         <%= link_to 'Nueva tarea', new_tarea_path, class: 'btn btn-primary ' %>
+        </div>   
+      </div>
+      
+    <%= yield %>
+  </body>
+</html>

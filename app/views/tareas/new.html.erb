@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+  <h1 class="container text-center">Nueva Tarea</h1>
+  
+    <div class="container text-center ">
+      
+        <%= form_for :tarea, url: tareas_path do |f| %>
+        <div class="body">
+        <%= f.label :titulo %>
+        <%= f.text_field :titulo %>
+        <br>
+        <%= f.label :nota %>
+        <%= f.text_field :nota %>
+      </div>
+        <br>
+      <div class="footer">
+        <%= f.submit 'Save', class: 'btn btn-primary' %>
+      </div>
+      <% end %>
+    </div> 
+  </div>   
+</div>
